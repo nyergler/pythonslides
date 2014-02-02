@@ -19,6 +19,7 @@ DOCUMENTATION_CHOICES = (
     ('mkdocs', _('Mkdocs')),
     ('sphinx_htmldir', _('Sphinx HtmlDir')),
     ('sphinx_websupport2', _('Sphinx Websupport')),
+    ('hieroglyph', _('Hieroglyph Slides')),
     #('sphinx_man', 'Sphinx Man'),
     #('rdoc', 'Rdoc'),
 )

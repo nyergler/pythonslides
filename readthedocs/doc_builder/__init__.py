@@ -8,6 +8,7 @@ from .backends import (
     sphinx_dash,
     sphinx_search,
     mkdocs,
+    hieroglyph,
 )
 
 
@@ -20,4 +21,5 @@ loading = {'sphinx': sphinx.Builder,
            'sphinx_dash': sphinx_dash.Builder,
            'sphinx_search': sphinx_search.Builder,
            'mkdocs': mkdocs.Builder,
+           'hieroglyph': hieroglyph.Builder,
            }

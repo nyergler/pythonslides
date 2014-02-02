@@ -62,3 +62,6 @@ git+https://github.com/ericholscher/readthedocs-sphinx-ext#egg=readthedocs_ext
 
 # Websupport
 git+https://github.com/ericholscher/django-sphinx-websupport#egg=websupport
+
+# Slide support
+git+https://github.com/nyergler/hieroglyph#egg=hieroglyph
