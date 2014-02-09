@@ -1,20 +1,21 @@
+import os
 from .base import *  # noqa
 
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'docs',
-        'USER': 'postgres',  # Not used with sqlite3.
+        'NAME': 'pyslides',
+        'USER': 'deployer',  # Not used with sqlite3.
         'PASSWORD': '',
-        'HOST': '10.177.73.97',
+        'HOST': '127.0.0.1',
         'PORT': '',
     }
 }
 
-DEBUG = False
-TEMPLATE_DEBUG = False
-CELERY_ALWAYS_EAGER = False
+DEBUG = os.environ.get('DEBUG', False)
+TEMPLATE_DEBUG = DEBUG
+CELERY_ALWAYS_EAGER = not DEBUG
 
 MEDIA_URL = 'https://media.readthedocs.org/'
 STATIC_URL = 'https://media.readthedocs.org/static/'
