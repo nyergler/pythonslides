@@ -55,6 +55,11 @@ NGINX_X_ACCEL_REDIRECT = True
 
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTOCOL", "https")
 
+REDIS = {
+    'host': 'localhost',
+    'port': 6379,
+    'db': 0,
+}
 
 try:
     from local_settings import *  # noqa
