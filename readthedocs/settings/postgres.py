@@ -17,8 +17,8 @@ DEBUG = os.environ.get('DEBUG', False)
 TEMPLATE_DEBUG = DEBUG
 CELERY_ALWAYS_EAGER = not DEBUG
 
-MEDIA_URL = 'https://media.readthedocs.org/'
-STATIC_URL = 'https://media.readthedocs.org/static/'
+MEDIA_URL = '/media/'
+STATIC_URL = '/static/'
 ADMIN_MEDIA_PREFIX = MEDIA_URL + 'admin/'
 SESSION_ENGINE = "django.contrib.sessions.backends.cached_db"
 
