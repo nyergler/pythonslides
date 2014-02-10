@@ -113,6 +113,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.media",
     "django.core.context_processors.request",
     "core.context_processors.readthedocs_processor",
+    "pyslides.context_processors.settings",
 )
 
 INSTALLED_APPS = [
@@ -214,6 +215,8 @@ if DEBUG:
 # Guardian Settings
 GUARDIAN_RAISE_403 = True
 ANONYMOUS_USER_ID = -1
+
+GOOGLE_ANALYTICS_ACCT = None
 
 # RTD Settings
 REPO_LOCK_SECONDS = 30

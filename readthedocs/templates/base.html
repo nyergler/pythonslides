@@ -132,11 +132,11 @@
 
 </body>
 
-<!-- BEGIN google analytics -->
 <script type="text/javascript">
 
+{% if GA_ACCT %}
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-17997319-1']);
+  _gaq.push(['_setAccount', '{{ GA_ACCT }}']);
   _gaq.push(['_trackPageview']);
 
   (function() {
@@ -144,6 +144,8 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
+
+{% endif %}
 
   $('.rtfd-header-search input:text').autocomplete({
     source: '{% url search_autocomplete %}',
@@ -157,6 +159,5 @@
   {% block footerjs %}{% endblock %}
 
 </script>
-<!-- END google analytics -->
 
 </html>
