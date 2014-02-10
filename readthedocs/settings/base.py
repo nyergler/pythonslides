@@ -9,12 +9,11 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 TASTYPIE_FULL_DEBUG = True
 
-PRODUCTION_DOMAIN = 'readthedocs.org'
+PRODUCTION_DOMAIN = 'pythonslides.com'
 USE_SUBDOMAIN = False
 
 ADMINS = (
-    ('Charlie Leifer', 'coleifer@gmail.com'),
-    ('Eric Holscher', 'eric@ericholscher.com'),
+    ('Nathan Yergler', 'nathan@yergler.net'),
 )
 
 MANAGERS = ADMINS
