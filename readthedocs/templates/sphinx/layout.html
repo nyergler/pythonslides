@@ -7,21 +7,21 @@
 {% set canonical_page = pagename + ending %}
 {% if canonical_url %}
   {% if single_version %}
-  <!-- 
-  Single version, so link without a language or version 
+  <!--
+  Single version, so link without a language or version
   http://docs.readthedocs.org/en/latest/canonical.html
   -->
   <link rel="canonical" href="{{ canonical_url }}{{ canonical_page.replace("index.html", "").replace("index/", "") }}">
   {% else %}
-  <!-- 
+  <!--
   Always link to the latest version, as canonical.
   http://docs.readthedocs.org/en/latest/canonical.html
   -->
   <link rel="canonical" href="{{ canonical_url }}{{ rtd_language }}/latest/{{ canonical_page.replace("index.html", "").replace("index/", "") }}">
   {% endif %}
 {% else %}
-<!-- 
-Read the Docs is acting as the canonical URL for your project. 
+<!--
+Hieroglyph is acting as the canonical URL for your project.
 If you want to change it, more info is available in our docs:
   http://docs.readthedocs.org/en/latest/canonical.html
 -->
@@ -76,4 +76,3 @@ If you want to change it, more info is available in our docs:
 {% endif %}
 <!-- end RTD <extrahead> -->
 {% endblock %}
-
