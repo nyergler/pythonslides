@@ -43,14 +43,23 @@
               <div class="module-header">
                 <h3>{% trans "What is this place?" %}</h3>
                 <p>
-{% blocktrans %}Hieroglyph hosts documentation, making it fully searchable and easy to find.
-You can import your docs using any major version control system, including Mercurial, Git, Subversion, and Bazaar.
-We support <a href="http://read-the-docs.readthedocs.org/en/latest/webhooks.html">webhooks</a> so your docs get built when you commit code.
-There's also support for versioning so you can build docs from tags and branches of your code in your repository. A <a href="http://read-the-docs.readthedocs.org/en/latest/features.html">full list of features</a> is available.{% endblocktrans %}
+{% blocktrans %}Hieroglyph hosts presentations built
+using <a href="http://sphinx-doc.org">Sphinx</a>, and makes the easy
+to search and share. Hieroglyph supports most major version control
+systems, including Git, Subversion, and Mercurial. Webhooks make it
+easy to update your presentation as you make changes. There's also
+support for versioning, so you can easily share different variations
+of a presentation. .
+{% endblocktrans %}
+
+{% comment %}
+A <a href="http://read-the-docs.readthedocs.org/en/latest/features.html">full
+list of features</a> is available.
                 </p>
                 <p>
 {% blocktrans with "https://read-the-docs.readthedocs.org/en/latest/getting_started.html" as getting_started_url %}It's free and simple.  Read the <a href="{{ getting_started_url }}">Getting Started</a> guide to get going!{% endblocktrans %}
                 <p>
+{% endcomment %}
               </div>
 
             </div>
@@ -86,7 +95,7 @@ There's also support for versioning so you can build docs from tags and branches
             <div class="module-wrapper">
 
               <div class="module-header">
-                <h3>{% trans "Recently Updated Projects" %} <span class="small_head"><a href="{% url projects_list %}">{% trans "(All Projects)" %}</a></span></h3>
+                <h3>{% trans "Recently Updated Presentations" %} <span class="small_head"><a href="{% url projects_list %}">{% trans "(All Presentations)" %}</a></span></h3>
               </div>
 
               <div class="module-list">
@@ -148,15 +157,14 @@ There's also support for versioning so you can build docs from tags and branches
           {% endcomment %}
 
     <div>
-        <p>
-            <a href="https://docs.readthedocs.org/en/latest/index.html">Documentation for Hieroglyph</a> is hosted on the site. <a href="https://github.com/rtfd/readthedocs.org">Code for the site</a> is available on GitHub.
-        </p>
+{% comment %}
         <p>
             Hieroglyph development is funded by readers like you. Help keep the site alive and well by supporting us on <a href="https://www.gittip.com/readthedocs/">Gittip</a>.
         </p>
         <p>
             Hosting for the project is graciously provided by <a href="http://www.rackspace.com/cloud/">Rackspace</a>
         </p>
+{% endcomment %}
     </div>
 
 {% endblock %}
