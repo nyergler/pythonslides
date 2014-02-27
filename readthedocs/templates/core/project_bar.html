@@ -33,7 +33,7 @@
           <ul>
               <li class="{{ overview_active }}"><a href="{{ project.get_absolute_url }}">{% trans "Overview" %}</a></li>
             {% if project.has_good_build %}
-              <li><a href="{{ project.get_docs_url }}">{% trans "View Docs" %}</a></li>
+              <li><a href="{{ project.get_docs_url }}">{% trans "View Slides" %}</a></li>
             {% endif %}
 
             <li class="{{ downloads_active }}"><a href="{% url project_downloads project.slug %}" rel="nofollow,noindex">{% trans "Downloads" %}</a></li>
