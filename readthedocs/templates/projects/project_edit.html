@@ -20,7 +20,7 @@
   </script>
 {% endblock %}
 
-{% block title %}{% trans "Edit Project" %}{% endblock %}
+{% block title %}{% trans "Edit Presentation" %}{% endblock %}
 
 {% block editing-option-edit-proj %}class="active"{% endblock %}
 {% block editing-option-view %}active{% endblock %}
@@ -30,7 +30,7 @@
 {% block project_edit_content %}
   <form method="post" action=".">{% csrf_token %}
     <p class="empty">
-      You can change how your project is built in your <a href="../advanced/">Advanced Settings</a>.
+      You can change how your presentation is built in your <a href="../advanced/">Advanced Settings</a>.
     </p>
     {{ form.as_p }}
     <p>

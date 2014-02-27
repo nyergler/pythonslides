@@ -8,10 +8,10 @@
 
 {% if built %}
 {% blocktrans %}{{ project }} is now building.{% endblocktrans %}<br><br>
-{# Translators: 'it' refers the current project being built. #}
+{# Translators: 'it' refers the current presentation being built. #}
 {% blocktrans with project.get_absolute_url as project_url %}Check it out <a href="{{ project_url }}">over here</a>.{% endblocktrans %}
 {% else %}
-{% trans "This is a post-commit hook. Set it up in your project admin to POST here, for us to update your doc changes automatically." %}
+{% trans "This is a post-commit hook. Set it up in your presentation admin to POST here, for us to update your doc changes automatically." %}
 {% endif %}
 
 {% endblock %}

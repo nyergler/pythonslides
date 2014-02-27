@@ -13,7 +13,7 @@
 
 {% block project_edit_content %}
   <p class="help_text">
-    {% trans "This allows you to add translations to your project. Select the project below that is a translation of your current project." %}
+    {% trans "This allows you to add translations to your presentation. Select the presentation below that is a translation of your current presentation." %}
   </p>
 
   <h3> {% trans "Existing Translations" %} </h3>
@@ -28,7 +28,7 @@
     {% endfor %}
     </ul>
   <p>
-    {% trans "Choose which project you would like to add as a translation." %}
+    {% trans "Choose which presentation you would like to add as a translation." %}
   </p>
   <form method="post" action=".">{% csrf_token %}
     {{ form.as_p }}

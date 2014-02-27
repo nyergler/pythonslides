@@ -6,7 +6,7 @@
       <li class="module-item">
       {% ifequal result.model_name 'project' %}
         <p class="module-item-title">
-          {% trans "Project:" %}
+          {% trans "Presentation:" %}
           <a href="{% if result.absolute_url %}{{ result.absolute_url }}{% else %}{{ result.object.get_absolute_url }}{% endif %}">{{ result.title }} - {{ result.author }}</a>
         </p>
         {% else %}

@@ -18,7 +18,7 @@
           {% endfor %} <small>(<a href="?q={{ query }}" id='id_remove_facets'>{% trans "remove" %}</a>)</small></h5>
 
       {% else %}
-      <h5>{% trans "Filter by Project" %}</h5>
+      <h5>{% trans "Filter by Presentation" %}</h5>
       <div class="filter">
           <dl>
               {% if facets.fields.project %}
@@ -29,7 +29,7 @@
                       {% endif %}
                   {% endfor %}
               {% else %}
-                  <p>{% trans "No project facets." %}</p>
+                  <p>{% trans "No presentation facets." %}</p>
               {% endif %}
           </dl>
       </div>
@@ -46,7 +46,7 @@
             <li class="module-item">
             {% ifequal result.model_name 'project' %}
               <p class="module-item-title">
-                {% trans "Project:" %}
+                {% trans "Presentation:" %}
                 <a href="{% if result.absolute_url %}{{ result.absolute_url }}{% else %}{{ result.object.get_absolute_url }}{% endif %}">{{ result.title }} - {{ result.author }}</a>
               </p>
               {% else %}

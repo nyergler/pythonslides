@@ -2,21 +2,21 @@
 
 {% load i18n %}
 
-{% block title %}{% trans "Edit Subprojects" %}{% endblock %}
+{% block title %}{% trans "Edit Subpresentations" %}{% endblock %}
 
 {% block nav-dashboard %} class="active"{% endblock %}
 
 {% block editing-option-edit-proj %}class="active"{% endblock %}
 
 {% block project-subprojects-active %}active{% endblock %}
-{% block project_edit_content_header %}{{ project.name }} <small class="quiet">{% trans "Subprojects" %}</small>{% endblock %}
+{% block project_edit_content_header %}{{ project.name }} <small class="quiet">{% trans "Subpresentations" %}</small>{% endblock %}
 
 {% block project_edit_content %}
   <p class="help_text">
-    {% trans "This allows you to add subprojects to your project. This allows them to live in the same namespace in the URLConf for a subdomain or CNAME." %}
+    {% trans "This allows you to add subpresentations to your presentation. This allows them to live in the same namespace in the URLConf for a subdomain or CNAME." %}
   </p>
 
-  <h3> {% trans "Existing Subprojects" %} </h3>
+  <h3> {% trans "Existing Subpresentations" %} </h3>
   <p>
     <ul>
     {% for relationship in subprojects %}

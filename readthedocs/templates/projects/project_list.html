@@ -6,15 +6,15 @@
 {% block title %}
 {% if person %}
     {% if tag %}
-        {% blocktrans with person.username as username and tag.name as tag %}Projects by {{ username }} tagged with {{ tag }}{% endblocktrans %}
+        {% blocktrans with person.username as username and tag.name as tag %}Presentations by {{ username }} tagged with {{ tag }}{% endblocktrans %}
     {% else %}
-        {% blocktrans with person.username as username %}Projects by {{ username }}{% endblocktrans %}
+        {% blocktrans with person.username as username %}Presentations by {{ username }}{% endblocktrans %}
     {% endif %}
 {% else %}
     {% if tag %}
-        {% blocktrans with tag.name as tag %}Projects tagged with {{ tag }}{% endblocktrans %}
+        {% blocktrans with tag.name as tag %}Presentations tagged with {{ tag }}{% endblocktrans %}
     {% else %}
-        {% trans "Projects" %}
+        {% trans "Presentations" %}
     {% endif %}
 {% endif %}
 {% endblock %}
@@ -24,15 +24,15 @@
 {% block content-header %}
 {% if person %}
     {% if tag %}
-        <h1>{% blocktrans with person.username as username and tag.name as tag %}Projects by {{ username }} tagged with {{ tag }}{% endblocktrans %}</h1>
+        <h1>{% blocktrans with person.username as username and tag.name as tag %}Presentations by {{ username }} tagged with {{ tag }}{% endblocktrans %}</h1>
     {% else %}
-        <h1>{% blocktrans with person.username as username %}Projects by {{ username }}{% endblocktrans %}</h1>
+        <h1>{% blocktrans with person.username as username %}Presentations by {{ username }}{% endblocktrans %}</h1>
     {% endif %}
 {% else %}
     {% if tag %}
-        <h1>{% blocktrans with tag.name as tag %}Projects tagged with {{ tag }}{% endblocktrans %}</h1>
+        <h1>{% blocktrans with tag.name as tag %}Presentations tagged with {{ tag }}{% endblocktrans %}</h1>
     {% else %}
-        <h1>{% trans "Projects" %}</h1>
+        <h1>{% trans "Presentations" %}</h1>
     {% endif %}
 {% endif %}
 {% endblock %}
@@ -45,7 +45,7 @@
             <div class="module-wrapper">
 
               <div class="module-header">
-                <h3>{% trans "Browse projects" %}</h3>
+                <h3>{% trans "Browse presentations" %}</h3>
               </div>
 
               <div class="module-list">

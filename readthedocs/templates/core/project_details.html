@@ -110,7 +110,7 @@
     </p>
   {% endif %}
 
-  <h3>{% trans "Project Privacy Level" %}</h3>
+  <h3>{% trans "Presentation Privacy Level" %}</h3>
   <div id="privacy_level">
     <p>
       {{ project.get_privacy_level_display }}
@@ -127,7 +127,7 @@
 
   {% if project.django_packages_url %}
   <h3>{% trans "Open Comparison" %}</h3>
-  <p>{% blocktrans with project.django_packages_url as url %}This project has more information available about it on <a href="{{ url }}">Open Comparison!</a>{% endblocktrans %}</p>
+  <p>{% blocktrans with project.django_packages_url as url %}This presentation has more information available about it on <a href="{{ url }}">Open Comparison!</a>{% endblocktrans %}</p>
   {% endif %}
 
   {% if project.translations.exists %}
@@ -140,7 +140,7 @@
   {% endif %}
 
   {% if project.subprojects.exists %}
-    <h3>{% trans "Sub Projects" %}</h3>
+    <h3>{% trans "Sub Presentations" %}</h3>
       <ul>
       {% for rel in project.subprojects.all %}
           <li><a href="{{ rel.get_absolute_url }}">{{ rel.child }}</a></li>
@@ -168,7 +168,7 @@
     <div class="module-wrapper">
 
       <div class="module-header">
-        <h3>{% trans "Most viewed pages for this project" %}<span class="small_head"></span></h3>
+        <h3>{% trans "Most viewed pages for this presentation" %}<span class="small_head"></span></h3>
       </div>
 
       <div class="module-list">

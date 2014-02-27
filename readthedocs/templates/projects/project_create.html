@@ -26,16 +26,16 @@
   </script>
 {% endblock %}
 
-{% block title %}{% trans "Create a new project" %}{% endblock %}
+{% block title %}{% trans "Create a new presentation" %}{% endblock %}
 
 {% block content-header %}
-      <h1>{% trans "Create a New Project" %}</h1>
+      <h1>{% trans "Create a New Presentation" %}</h1>
 {% endblock %}
 
 {% block content %}
       <p class="help_text">
         {% trans "Create new documentation here. If you already have slides in a public repository," %}
-        <a class="" href="{% url projects_import %}">{% trans "import an existing project" %}</a>.
+        <a class="" href="{% url projects_import %}">{% trans "import an existing presentation" %}</a>.
       </p>
       <form method="post" action=".">{% csrf_token %}
         {{ form.as_p }}

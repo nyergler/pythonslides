@@ -2,7 +2,7 @@
 {% load i18n %}
 {% load pagination_tags %}
 
-{% block title %}{% trans "Project Dashboard" %}{% endblock %}
+{% block title %}{% trans "Presentation Dashboard" %}{% endblock %}
 
 {% block dashboard_bar %}
   {% with projects_active="active" %}
@@ -54,7 +54,7 @@
               {% endif %}
 
               <div class="module-header">
-                <h3>{% trans "My Projects" %}</h3>
+                <h3>{% trans "My Presentations" %}</h3>
               </div>
 
               <div class="module-list">
@@ -80,7 +80,7 @@
           {% else %}
           {% url projects_import as projects_import_url %}
           <p class="empty">
-          {% blocktrans with "https://read-the-docs.readthedocs.org/en/latest/getting_started.html" as getting_started_url %}You don't have any projects.  You should <a href="{{ projects_import_url }}">create new slides</a> on the site.<br>
+          {% blocktrans with "https://read-the-docs.readthedocs.org/en/latest/getting_started.html" as getting_started_url %}You don't have any presentations.  You should <a href="{{ projects_import_url }}">create new slides</a> on the site.<br>
           Check out the <a href="{{ getting_started_url }}">Getting Started</a> documentation for information about how to get going.{% endblocktrans %}</p>
           {% endif %}
           <!-- END your projects list -->
