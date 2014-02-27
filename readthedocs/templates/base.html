@@ -72,18 +72,21 @@
 
 
         {% block footer-content %}
-        <p>{% blocktrans with "<a href='http://ericholscher.com/'>Eric Holscher</a>" as eric and "<a href='http://charlesleifer.com/'>Charles Leifer<a>" as charles and "<a href='http://bobbygrace.info/'>Bobby Grace</a>" as bobby and "<a href='http://djangodash.com/'>Django Dash</a>" as djangodash %}Copyright 2010-2013. Created by {{ eric }}, {{ charles }}, and {{ bobby }} for the 2010 {{ djangodash }}.{% endblocktrans %}
+        <p>Copyright 2014. Created
+        by <a href="http://yergler.net">Nathan Yergler</a> based on
+        the excellent work of <a href="http://readthedocs.org">Read
+        the Docs</a>.
         </p>
-        <a href="https://github.com/rtfd/readthedocs.org">Github</a> | <a href="http://read-the-docs.readthedocs.org">{%  trans "Docs" %}</a>.
+        <a href="https://github.com/nyergler/hieroglyph.io">Github</a>
+        |
+        <a href="http://docs.hieroglyph.io">{%  trans "Docs" %}</a>.
 
-        {% trans 'Made by <a href="https://github.com/rtfd/readthedocs.org/graphs/contributors">humans</a>. Funded by <a href="https://www.gittip.com/readthedocs/">readers like you</a>.' %}
         </p>
         {% endblock %}
 
         <p>
         Change Site Language
         </p>
-
 
         {% get_current_language as current_lang %}
         <form action="/i18n/setlang/" method="post">{% csrf_token %}
@@ -105,6 +108,7 @@
         <br>
         <br>
 
+{% comment %}
         <p>
         Hieroglyph Announcements
         <!-- Begin MailChimp Signup Form -->
@@ -115,8 +119,8 @@
         </form>
         </div>
         </p>
-
         <!--End mc_embed_signup-->
+{% endcomment %}
       </div>
     </div>
     <!-- END footer-->
