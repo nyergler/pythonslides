@@ -10,7 +10,7 @@
     {% if project.has_good_build %}
     <span class="dropdown" style="position:absolute; right:0px; top:0px;">
       <span>
-          <a href="{{ project.get_docs_url }}">{% trans "View Docs" %}</a>
+          <a href="{{ project.get_docs_url }}">{% trans "View Slides" %}</a>
         <a href="#">&#x25BC;</a>
       </span>
       <ul>
@@ -22,7 +22,7 @@
     </span>
     {% else %}
     <ul class="module-item-menu">
-      <li><a href="{{ project.get_builds_url }}">{% trans "No Docs" %}</a></li>
+      <li><a href="{{ project.get_builds_url }}">{% trans "No Slides" %}</a></li>
     </ul>
     {% endif %}
 
